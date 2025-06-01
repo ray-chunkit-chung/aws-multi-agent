@@ -1,0 +1,8 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Sample CloudFormation template (S3 bucket)
+
+Resources:
+  SampleBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "sample-cf-bucket-${AWS::AccountId}-${AWS::Region}"

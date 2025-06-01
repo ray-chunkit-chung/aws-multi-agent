@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+  build:
+    commands:
+    - echo "Deploying CloudFormation Stack..."
+    - aws cloudformation deploy \ --template-file templates/main.yaml \ --stack-name SampleStack \ --capabilities CAPABILITY_NAMED_IAM
